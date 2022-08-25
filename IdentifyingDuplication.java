@@ -8,23 +8,26 @@ public class IdentifyingDuplication {
         ArrayList<Integer> al=new ArrayList<>();
         ArrayList<Integer> al1=new ArrayList<>();
        for (int i = 0; i < a.length; i++) {
-        if(!(al.contains(a[i])))
+        if(al1.contains(a[i]))
         {
-            al.add(a[i]);
+            if(!(al.contains(a[i])))
+            {
+                al.add(a[i]);
+            }
         }
         else
         {
             al1.add(a[i]);
         }
        } 
-       System.out.println(al1);
+       System.out.println(al);
     }
 
 
 
 
 
-    
+
     public static void main(String[] args) {
         Scanner scan=new Scanner(System.in);                    
         int size=scan.nextInt();                        //Array Input Through User!!
