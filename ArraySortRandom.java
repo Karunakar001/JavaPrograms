@@ -22,18 +22,22 @@ class ArraySortRamdom
         Arrays.sort(a);
         for(i=0;i<n;i++)
         {
+            System.out.print(a[i]+" ");
+        }
+        System.out.println();
+        for(i=0;i<n;i++)
+        {
             if(a[i]==rNum)
             {
                 break;
             }
         }
-        for(int j=n-1;j>=i;j--)
+        for(int j=n-1;j>i;j--)
         {
             i++;
             temp=a[j];
             a[j]=a[i];
             a[i]=temp;
-            
         }
         for(int j=0;j<n;j++)
         {
